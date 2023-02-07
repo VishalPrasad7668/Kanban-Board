@@ -1,0 +1,40 @@
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+mat-sidenav-container {
+    height: 100%;
+
+}
+
+mat-sidenav {
+    width: 260px;
+    background-color: whitesmoke;
+    border-bottom-right-radius: 3px;
+}
+
+mat-divider {
+    margin-top: 40px;
+}
+
+mat-list-item {
+    top: 20px;
+}
+
+/* mat-toolbar {
+    background-image: url(../../assets/low.jpg);
+    height: 70px;
+} */
+
+mat-icon {
+    color: darkblue
+}
+
+a{
+    text-decoration: none;
+}
+/* h3 {
+    color: aliceblue;
+    font-family: 'Rubik Spray Paint', cursive;
+    font-size: x-large;
+} */

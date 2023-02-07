@@ -1,0 +1,30 @@
+<!-- <div *ngIf="receivedData">
+    <h2>{{receivedData.Title}}</h2>
+
+</div> -->
+<div class="task-body">
+    <div *ngIf="receivedData">
+        <h2><b>Title: </b>{{receivedData.title}}</h2>
+        <br>
+        <p><b>Id: </b>{{receivedData.id}}</p>
+
+        <p><b>Description: </b>{{receivedData.description}}</p>
+        <p><mat-icon class="card-icon">calendar_today</mat-icon>{{receivedData.deadline | date:'longDate'}}</p>
+        <p><mat-icon class="card-icon">label_important</mat-icon><ng-container [ngSwitch]="receivedData.priority">
+                <ng-container *ngSwitchCase="'Urgent'">
+                    <span style="background-color: red;padding: 5px; border-radius: 5%;">Urgent</span>
+                </ng-container>
+                <ng-container *ngSwitchCase="'High'">
+                    <span style="background-color: rgb(226, 116, 135);padding: 5px; border-radius: 5%;">High</span>
+                </ng-container>
+                <ng-container *ngSwitchCase="'Low'">
+                    <span style="background-color: wheat;padding: 5px; border-radius: 5%;">Low</span>
+                </ng-container>
+                <ng-container *ngSwitchCase="'Normal'">
+                    <span style="background-color: skyblue;padding: 5px; border-radius: 5%;">Normal</span>
+                </ng-container>
+                <ng-container *ngSwitchDefault>Code Default</ng-container>
+            </ng-container></p>
+        <p><mat-icon class="card-icon">person</mat-icon>{{receivedData.assign}}</p>
+    </div>
+</div>

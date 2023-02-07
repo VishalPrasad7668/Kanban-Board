@@ -1,0 +1,12 @@
+<div class="task-body">
+    <div *ngIf="receivedData">
+        <h2>{{receivedData.name}}</h2>
+        <p><mat-icon class="card-icon">mail</mat-icon>{{receivedData.email}}</p>
+
+        <p><mat-icon class="card-icon">call</mat-icon>{{receivedData.phoneNo}}</p>
+        <p><mat-icon class="card-icon">home</mat-icon>{{receivedData.address}}</p>
+        <p><mat-icon class="card-icon">work</mat-icon>{{receivedData.dept}}</p>
+        <p><mat-icon class="card-icon">badge</mat-icon>{{receivedData.position}}</p>
+
+    </div>
+</div>

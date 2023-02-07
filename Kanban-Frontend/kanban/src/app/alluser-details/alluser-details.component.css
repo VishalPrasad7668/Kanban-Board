@@ -1,0 +1,57 @@
+mat-toolbar {
+    background-color: #897622;
+    width: 100%
+}
+body{
+    background-image: url("../../assets/usersbg.jpg");
+    background-position: 100%;
+    background-size: cover;
+    height: 599px;
+    /* padding-bottom: 50%; */
+    
+}
+mat-card{
+    width: 300px;
+    height: 140px;
+    margin-right: 20px;
+    background-color: black;
+    color: whitesmoke;
+    border-radius: 3%;
+    padding: 20px;
+    opacity: 0.85;
+}
+
+mat-card-title{
+    margin-left: -20px;
+    margin-right: -25px;
+}
+#button{
+    border-radius: 8%;
+    background-color: #897622;
+    color: black;
+}
+h3{
+    font-family: cursive;
+    margin-top: -20px;
+}
+p{
+    font-size: medium;
+}
+#infobtn{
+    position: relative;
+    top: 5px;
+    
+}
+.pgctrl{
+    position: absolute;
+    bottom: 22px;
+    left: 550px;
+    color: white;
+
+    /* border: 2px solid #897622;
+    border-radius: 8px;
+    padding-top: 8px;
+    padding-right: 18px;
+    padding-left: -38px; */
+}
+

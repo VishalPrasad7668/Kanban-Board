@@ -1,0 +1,217 @@
+<mat-toolbar class="toolbar" >
+    <mat-toolbar-row >
+        
+        <label style="color: azure;margin-left: 1%;"><b>Kanban Board</b></label>
+        <label (click)="home()" style="color: azure;margin-left: 77%;font-size: large;"><b>Home</b></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <label (click)="login()"  style="color: azure;font-size: large;"><b>Login</b></label>
+    </mat-toolbar-row>
+</mat-toolbar>
+
+<body>
+    <section>
+        <!-- <div class="imgbg">
+            <img src="../../assets/img6.jpg">
+        </div> -->
+    <mat-card>
+    <mat-card-content>
+        <form [formGroup]="registrationForm" >
+            <h2>Register</h2>
+            <mat-form-field class="field">
+                <input matInput type="text" placeholder="Full Name" name="fullName" id="fullName"
+                    formControlName="fullName">
+                <mat-error *ngIf="fullName?.hasError('required')">
+                    Full Name is required.
+                </mat-error>
+            </mat-form-field>
+            
+            <mat-form-field class="field">
+                <input matInput type="email" placeholder="Email" name="emailId" formControlName="emailId">
+                <mat-error *ngIf="emailId?.hasError('required')">
+                    Email is required.
+                </mat-error>
+                <mat-error *ngIf="emailId?.hasError('email')">
+                    Enter valid email address.
+                </mat-error>
+            </mat-form-field>
+            <br>
+
+            <mat-form-field class="field">
+                <input matInput type="password" [type]="hide ? 'password' : 'text'"  placeholder="Password" name="password" formControlName="password">
+                <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                    [attr.aria-pressed]="hide">
+                    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
+                <mat-error *ngIf="password?.hasError('required')">
+                    Password is required.
+                </mat-error>
+                <mat-error *ngIf="password?.hasError('pattern')">
+                    Password should have min 8 character password with at least a symbol, upper and lower case letter
+                    and a number.
+                </mat-error>
+            </mat-form-field>
+            <br>
+           
+            <mat-form-field class="field">
+                <input matInput type="password" [type]="hide1 ? 'password' : 'text'" placeholder="Confirm Password" name="confirmPassword"
+                    formControlName="confirmPassword">
+                <button mat-icon-button matSuffix (click)="hide1 = !hide1" [attr.aria-label]="'Hide password'"
+                    [attr.aria-pressed]="hide1">
+                    <mat-icon>{{hide1 ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
+                <mat-error *ngIf="confirmPassword?.hasError('required')">
+                    This field is required.
+                </mat-error>
+                <mat-error *ngIf="confirmPassword?.hasError('pattern')">
+                    Password should have min 8 character password with at least a symbol, upper and lower case letter
+                    and a number.
+                </mat-error>
+                <mat-error *ngIf="confirmPassword?.errors?.['confirmedValidator']">
+                    Password and Confirm Password should match.
+                </mat-error>
+            </mat-form-field>
+
+            <br>
+
+            <div>
+                <mat-form-field id="dept">
+                    <input matInput type="text" placeholder="Department" name="department" formControlName="department">
+                    <mat-error *ngIf="department?.hasError('required')">
+                        Department is required.
+                    </mat-error>
+                </mat-form-field>
+                
+                <mat-form-field >
+                    <input matInput type="text" placeholder="Position" name="position" formControlName="position">
+                    <mat-error *ngIf="position?.hasError('required')">
+                        Position is required.
+                    </mat-error>
+                </mat-form-field>
+                </div>
+
+
+            <mat-form-field class="field">
+                <input matInput type="tel" placeholder="Phone Number" name="phoneNumber" formControlName="phoneNumber">
+                <mat-error *ngIf="phoneNumber?.hasError('required')">
+                    Phone Number is required.
+                </mat-error>
+                <mat-error *ngIf="phoneNumber?.hasError('pattern')">
+                    Valid Phone Number contain 10 digits starting with 6/7/8/9
+                </mat-error>
+            </mat-form-field>
+            <br>
+            <mat-form-field class="field">
+                <input matInput type="text" placeholder="Address" name="address" formControlName="address">
+                <mat-error *ngIf="address?.hasError('required')">
+                    Address is required.
+                </mat-error>
+            </mat-form-field>
+            <br>
+            
+            
+            <button mat-raised-button type="reset" color="accent" style="margin-left: 30px;">Reset</button>
+            <button mat-raised-button type="submit" [disabled]="!registrationForm.valid" color="accent" (click)="addUser()"
+                style="margin-left: 30px;">Submit</button>
+
+        </form>
+
+    </mat-card-content>
+    </mat-card>
+</section>
+</body>
+
+
+<!-- <mat-card>
+    <mat-card-content>
+        <form [formGroup]="registrationForm" >
+            <h2>Register</h2>
+            <mat-form-field>
+                <input matInput type="text" placeholder="Full Name" name="fullName" id="fullName"
+                    formControlName="fullName">
+                <mat-error *ngIf="fullName.hasError('required')">
+                    Full Name is required.
+                </mat-error>
+            </mat-form-field>
+            <br>
+            <mat-form-field>
+                <input matInput type="email" placeholder="Email" name="emailId" formControlName="emailId">
+                <mat-error *ngIf="emailId?.hasError('required')">
+                    Email is required.
+                </mat-error>
+                <mat-error *ngIf="emailId?.hasError('email')">
+                    Email valid email address.
+                </mat-error>
+            </mat-form-field>
+            <br>
+            <mat-form-field>
+                <input matInput type="password" [type]="hide ? 'password' : 'text'"  placeholder="Password" name="password" formControlName="password">
+                <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                    [attr.aria-pressed]="hide">
+                    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
+                <mat-error *ngIf="password.hasError('required')">
+                    Password is required.
+                </mat-error>
+                <mat-error *ngIf="password.hasError('pattern')">
+                    Password should have min 8 letter password, with at least a symbol, upper and lower case letters
+                    and a number.
+                </mat-error>
+            </mat-form-field>
+            <br>
+            <mat-form-field>
+                <input matInput type="password" [type]="hide1 ? 'password' : 'text'" placeholder="Confirm Password" name="confirmPassword"
+                    formControlName="confirmPassword">
+                <button mat-icon-button matSuffix (click)="hide1 = !hide1" [attr.aria-label]="'Hide password'"
+                    [attr.aria-pressed]="hide1">
+                    <mat-icon>{{hide1 ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
+                <mat-error *ngIf="confirmPassword.hasError('required')">
+                    This field is required.
+                </mat-error>
+                <mat-error *ngIf="confirmPassword.hasError('pattern')">
+                    Password should have min 8 letter password, with at least a symbol, upper and lower case letters
+                    and a number.
+                </mat-error>
+                <mat-error *ngIf="confirmPassword.errors?.['confirmedValidator']">
+                    Password and Confirm Password should match.
+                </mat-error>
+            </mat-form-field>
+            <br>
+            <mat-form-field>
+                <input matInput type="tel" placeholder="Phone Number" name="phoneNumber" formControlName="phoneNumber">
+                <mat-error *ngIf="phoneNumber.hasError('required')">
+                    Phone Number is required.
+                </mat-error>
+                <mat-error *ngIf="phoneNumber.hasError('pattern')">
+                    Valid Phone Number contain 10 digits starting with 7/8/9
+                </mat-error>
+            </mat-form-field>
+            <br>
+            <mat-form-field>
+                <input matInput type="text" placeholder="Address" name="address" formControlName="address">
+                <mat-error *ngIf="address.hasError('required')">
+                    Address is required.
+                </mat-error>
+            </mat-form-field>
+            <br>
+            <mat-form-field>
+                <input matInput type="text" placeholder="Department" name="department" formControlName="department">
+                <mat-error *ngIf="department.hasError('required')">
+                    Department is required.
+                </mat-error>
+            </mat-form-field>
+            <br>
+            <mat-form-field>
+                <input matInput type="text" placeholder="Position" name="position" formControlName="position">
+                <mat-error *ngIf="position.hasError('required')">
+                    Position is required.
+                </mat-error>
+            </mat-form-field>
+            <br>
+            <button mat-raised-button type="reset" color="accent" style="margin-left: 30px;">Reset</button>
+            <button mat-raised-button type="submit" [disabled]="!registrationForm.valid" color="accent" (click)="addUser()"
+                style="margin-left: 30px;">Submit</button>
+
+        </form>
+
+    </mat-card-content>
+</mat-card> -->

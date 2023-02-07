@@ -1,0 +1,85 @@
+<mat-toolbar class="toolbar">
+    <mat-toolbar-row>
+        <label style="color: azure;margin-left: 1%;"><b>Kanban Board</b></label>
+        <label (click)="home()" style="color: azure;margin-left: 83%;font-size: large;"><b>Home</b></label>
+
+    </mat-toolbar-row>
+</mat-toolbar>
+
+<body style="height: 91.3%;width:100% ;">
+    <section style="height: 100%;">
+        <div class="imgBx" style="height: 100%;">
+            <img src="../../assets/img6.jpg">
+        </div>
+
+        <mat-card class="contentBx">
+            <mat-card-header>
+                <h1> Log In </h1>
+            </mat-card-header>
+            <mat-card-content class="formBx">
+                <form [formGroup]="loginForm">
+                    <mat-form-field id="formfield">
+                        <input matInput type="email" placeholder="Email" name="emailId" formControlName="emailId">
+                        <mat-error *ngIf="emailId?.hasError('required')">
+                            Email is required.
+                        </mat-error>
+                        <mat-error *ngIf="emailId?.hasError('email')">
+                            Enter valid email address.
+                        </mat-error>
+                    </mat-form-field>
+                    <br>
+                    <mat-form-field>
+                        <input matInput type="password" [type]="hide ? 'password' : 'text'" placeholder="Password"
+                            name="password" formControlName="password">
+                        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                            [attr.aria-pressed]="hide">
+                            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                        </button>
+                        <mat-error *ngIf="password?.hasError('required')">
+                            Please provide a password.
+                        </mat-error>
+                    </mat-form-field>
+                    <br>
+
+                    <button mat-raised-button type="submit" color="accent" style="margin-left: 30px;"
+                        (click)="onSubmit()">Log In</button>
+                </form>
+            </mat-card-content>
+            <br>
+            <a id="anchor" (click)="onForgot()" style="color: steelblue; ">Forgot Password</a>
+            <p>Don't have an account?<a href="/register"> Register</a></p>
+        </mat-card>
+
+    </section>
+</body>
+<!-- <mat-card>
+    <mat-card-content>
+        <form [formGroup]="loginForm"  >
+            <mat-form-field id="formfield">
+                <input matInput type="email" placeholder="Email" name="emailId" formControlName="emailId">
+                <mat-error *ngIf="emailId?.hasError('required')">
+                    Email is required.
+                </mat-error>
+                <mat-error *ngIf="emailId?.hasError('email')">
+                    Enter valid email address.
+                </mat-error>
+            </mat-form-field>
+            <br>
+            <mat-form-field>
+                <input matInput type="password"  [type]="hide ? 'password' : 'text'" placeholder="Password" name="password" formControlName="password">
+                <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                    [attr.aria-pressed]="hide">
+                    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
+                <mat-error *ngIf="password.hasError('required')">
+                    Please provide a password.
+                </mat-error>
+            </mat-form-field>
+            <br>
+           
+            <button mat-raised-button type="submit" color="accent" style="margin-left: 30px;" (click)="onSubmit()">Log In</button>
+        </form>
+    </mat-card-content>
+    <br>
+    <p>Don't have an account?<a href="/register"> Register</a></p>
+</mat-card> -->

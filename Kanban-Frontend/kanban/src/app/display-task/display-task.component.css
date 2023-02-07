@@ -1,0 +1,18 @@
+.card-icon{
+    position: relative;
+    top: 5px;
+    margin-right: 20px;
+    
+}
+.task-body{
+    background-color: gainsboro;
+    /* margin: -23px;  */
+    padding: 5px 0px 5px 15px;
+}
+h2{
+    font-family: cursive;
+}
+p{
+    font-family: cursive;
+
+}

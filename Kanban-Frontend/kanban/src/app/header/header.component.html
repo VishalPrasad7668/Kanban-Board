@@ -1,0 +1,30 @@
+<mat-toolbar>
+    <button mat-icon-button (click)="sidenav.toggle()">
+        <mat-icon>chevron_right</mat-icon>
+    </button>
+    <img src="../../assets/kanban.png" width="70px" height="70px">    <h3>KANBAN</h3>
+    <span class="example-spacer"></span>
+    <button mat-icon-button aria-label="Example icon-button with heart icon">
+        <mat-icon>home</mat-icon>
+    </button>
+    <button  mat-icon-button aria-label="Example icon-button with Log Out icon" (click)="onLogout()">
+        <mat-icon>logout</mat-icon>
+    </button>
+</mat-toolbar>
+<mat-sidenav-container>
+    <mat-sidenav #sidenav mode="side">
+
+        <a href="/login"><mat-list-item>Login</mat-list-item></a>
+        <mat-divider></mat-divider>
+        <a href="/register"><mat-list-item>Register</mat-list-item></a>
+        <mat-divider></mat-divider>
+        <!-- <mat-list-item>Home</mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item>Log Out</mat-list-item>
+        <mat-divider></mat-divider> -->
+
+    </mat-sidenav>
+    <div>
+        
+    </div>
+</mat-sidenav-container>

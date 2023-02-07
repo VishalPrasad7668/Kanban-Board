@@ -1,0 +1,45 @@
+<div id="body">
+    <mat-toolbar class="toolbar">
+        <mat-toolbar-row>
+            <label style="color: azure;margin-left: 1%;"><b>Kanban Board</b></label>
+            <!-- <label (click)="onDashboard()" style="color: azure;margin-left: 70%;font-size: medium;">Dashboard</label>
+            <label (click)="onLogout()" style="color: azure;margin-left: 3%;font-size: medium;">Log Out</label> -->
+            <!-- <label (click)="onClick()" style="color: azure;margin-left: 3%;font-size: medium;">All Users</label> -->
+
+            <div style="background-color: #897622; margin-left: 930px;">
+                <mat-select placeholder="Hi, {{userData.fullName}}">
+                  <mat-option value="option2" (click)="onDashboard()"  style="background-color: #897622; color: azure;margin-top: -8px;"><span style=" color: azure">Dashboard</span></mat-option>
+                  <mat-option value="option3" (click)="onLogout()" style="background-color: #897622; margin-bottom: -8px;"><span style=" color: azure">Log Out</span></mat-option>
+                </mat-select>
+          
+              </div>
+
+        </mat-toolbar-row>
+    </mat-toolbar>
+    <div class="container">
+        <mat-card>
+            <div id="head">
+                <h3>|| Personal Information ||</h3>
+            </div>
+            <mat-divider style="background-color: aliceblue;"></mat-divider>
+            <mat-card-header>
+                <mat-card-title>
+                    <h1><span id="span"><b>Full Name:</b>  {{userData.fullName}}</span></h1>
+                </mat-card-title>
+                
+            </mat-card-header>
+            <mat-card-content>
+                <p><span id="span"><b>Email Id:</b> {{userData.emailId}}</span> </p>
+                <p><span id="span"><b>Phone Number:</b> {{userData.phoneNumber}}</span></p>
+                <p><span id="span"><b>Address:</b> {{userData.address}}</span></p>
+                <p><span id="span"><b>Department:</b> {{userData.department}}</span></p>
+                <p><span id="span"><b>Position:</b> {{userData.position}}</span></p>
+            </mat-card-content>
+            <br>
+            <mat-card-actions>
+                <a href="update-profile/{{userData.emailId}}">
+                    <button mat-raised-button id="button">Update Profile</button></a>
+            </mat-card-actions>
+        </mat-card>
+    </div>
+</div>

@@ -1,0 +1,301 @@
+.container {
+  width: 300px;
+  max-width: 100%;
+  /* margin: 0 10px; */
+  margin-right: 32px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.list {
+  min-height: 60px;
+  border-radius: 4px;
+  display: block;
+  word-break: break-all;
+  z-index: 2;
+}
+.sp{
+  background-color: #897622; padding-top: 30px; padding-bottom: 16px;
+}
+h3{
+  color: rgb(99, 44, 5);
+  /* text-decoration: underline; */
+  font-size: larger;
+  font-family: cursive;
+  border: 1px solid rgb(99, 44, 5);
+  text-align: center;
+}
+mat-card-actions{
+  margin-top: -35px;
+}
+.card-icon{
+  color: rgb(87, 57, 57);
+  /* position: relative;
+  top: -35px;
+  margin-right: 10px; */
+}
+
+.example-card{
+  padding-top: 15px;
+  padding-left: 5px;
+  padding-right: 5px;
+  height: max-content;
+  border-bottom: solid 1px #ccc;
+  box-sizing: border-box;
+  cursor: move;
+  background: #897622;
+  font-size: 14px;
+  margin-bottom: 20px;
+  font-family: cursive;
+}
+.mat-expansion-panel-header{
+  height: 80px;
+  background: #897622;
+}
+mat-card-title{
+  font-size: medium;
+}
+.title{
+  margin-left: 5px;
+}
+#dragbody{
+  position: absolute;
+  z-index: 1;
+  top: 80px;
+  right: 20px;
+  
+  
+}
+body{
+  /* background-color:cadetblue; */
+  background-image: url("../../assets/baground.jpg");
+  background-repeat:repeat;
+  background-size: auto;
+  
+  /* background-image: url("../../assets/baground.jpg");
+  display: grid;
+  grid-template-rows: repeat(auto-fill, 25rem);
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 0.8rem;
+  grid-auto-columns: 1fr;
+  grid-auto-rows: 25rem;
+  height: 100%;
+  object-fit: cover; */
+}
+.addbtn{
+  position:absolute;
+  top: 90px;
+  left: 70px;
+  background-color: #897622;
+}
+
+/* Highlight the list item that is being dragged. */
+.cdk-drag-preview {
+  border-radius: 4px;
+  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
+              0 8px 10px 1px rgba(0, 0, 0, 0.14),
+              0 3px 14px 2px rgba(0, 0, 0, 0.12);
+}
+
+/* Animate items as they're being sorted. */
+.cdk-drop-list-dragging .cdk-drag {
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+/* Animate an item that has been dropped. */
+.cdk-drag-animating {
+  transition: transform 300ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.cdk-drag-placeholder {
+  opacity: 0;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+
+mat-divider {
+  margin-top: 40px;
+}
+
+mat-list-item {
+  top: 20px;
+  left: 20px;
+}
+
+
+mat-toolbar {
+  background-color: #897622;
+    width: 100%
+}
+
+mat-icon {
+  color: rgba(0, 0, 139, 0.692)
+}
+
+a{
+  text-decoration: none;
+}
+
+.wave{
+  font-size: 30px;
+  color: azure;
+  -webkit-box-reflect: 
+  below -20px
+  linear-gradient(transparent,rgba(0,0,0,0.2));
+}
+.wave span{
+  /* font-family: "Alfa Slab One", cursive; */
+  display: inline-block;
+  animation: wave-anim 1s infinite;
+  animation-delay: calc(0.05s * var(--item));
+}
+@keyframes wave-anim{
+  0%,
+  40%,
+  100%{
+    transform:translateY(0);
+  }
+  20%{
+    transform: translateY(-5px);
+  }
+}
+
+
+
+/* first component starts here */
+
+/* .container {
+  width: 310px;
+  max-width: 100%;
+  margin: 0 20px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.list {
+  border: solid 1px #ccc;
+  min-height: 60px;
+  background: white;
+  border-radius: 4px;
+  display: block;
+  overflow: hidden;
+}
+
+.list-item {
+  padding: 20px 10px;
+  border-bottom: solid 1px #ccc;
+  box-sizing: border-box;
+  cursor: move;
+  background: white;
+  color: black;
+  font-size: 14px;
+}
+
+.list-item:last-child {
+  border: none;
+}
+.addbtn{
+  position:fixed;
+  top: 90px;
+  right: 20px;
+}
+
+.cdk-drag-preview {
+  border-radius: 4px;
+  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
+              0 8px 10px 1px rgba(0, 0, 0, 0.14),
+              0 3px 14px 2px rgba(0, 0, 0, 0.12);
+}
+
+
+.cdk-drop-list-dragging .cdk-drag {
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+
+.cdk-drag-animating {
+  transition: transform 300ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.cdk-drag-placeholder {
+  opacity: 0;
+}
+mat-toolbar {
+  background-color: #897622;
+    width: 100%
+} */
+
+/* second component starts here */
+
+ /* .container {
+  width: 400px;
+  max-width: 100%;
+  margin: 0 20px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.list {
+  border: solid 1px #ccc;
+  min-height: 60px;
+  background: white;
+  border-radius: 4px;
+  display: block;
+  word-break: break-all;
+  
+}
+
+.example-card{
+  padding-top: 20px;
+  border-bottom: solid 1px #ccc;
+  box-sizing: border-box;
+  cursor: move;
+  background: whitesmoke;
+  font-size: 14px;
+}
+.mat-expansion-panel-header{
+  height: 80px;
+  background: lightblue;
+}
+mat-card-header{
+
+margin-left: -40px;
+margin-right: -40px;
+}
+.list-item:last-child {
+  border: none;
+}
+#dragbody{
+  margin-top: 20px;
+}
+.addbtn{
+  position:fixed;
+  top: 90px;
+  right: 20px;
+}
+
+
+.cdk-drag-preview {
+  border-radius: 4px;
+  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
+              0 8px 10px 1px rgba(0, 0, 0, 0.14),
+              0 3px 14px 2px rgba(0, 0, 0, 0.12);
+}
+
+
+.cdk-drop-list-dragging .cdk-drag {
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+
+.cdk-drag-animating {
+  transition: transform 300ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.cdk-drag-placeholder {
+  opacity: 0;
+}
+ */

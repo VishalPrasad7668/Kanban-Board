@@ -1,0 +1,49 @@
+.toolbar{
+    background-color: #897622;
+    font-family: 'Poppins',sans-serif;
+    position: absolute;
+    z-index: 1;
+}
+#cpass{
+    margin-left: 20px;
+}
+mat-card{
+    
+    position: absolute;
+    top: 90px;
+    left:15%;
+    width: 70%;
+    text-align: center;
+    /* background: #897622; */
+    background-color: whitesmoke;
+    color: black;
+    opacity: .7;
+    height: 650px;
+    border-radius: 20px;
+}
+
+.field{
+    width: 100%;
+}
+body{
+    height: 780px;
+    width: 100%;
+    background-image: url("../../assets/img6.jpg");
+    background-size: cover;
+}
+section{
+    height:100%;
+    
+} 
+#dept{
+    margin-right: 10px;
+}
+
+
+
+h2{
+    margin-top: -8px;
+    margin-bottom: -4px;
+    color:#897622;
+}
+

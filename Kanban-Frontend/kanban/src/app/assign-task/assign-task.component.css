@@ -1,0 +1,62 @@
+#card {
+    background-color: gainsboro;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 10px;
+}
+mat-toolbar {
+    background-color: #897622;
+    width: 100%
+}
+#head {
+    text-align: center;
+}
+
+h3 {
+    font-family: 'Pacifico', cursive;
+    font-size: xx-large;
+    color: rgba(0, 0, 0, 0.507);
+}
+
+#container {
+
+    width: 50%;
+    box-shadow: grey 4px 4px 4px 4px;
+    
+    padding: 20px;
+    position: absolute;
+    top: 120px;
+    left: 350px;
+    background-color: gainsboro;
+    box-shadow: 3px 3px 3px 3px gray;
+    border-radius: 3%;
+}
+
+
+
+#submit {
+    margin: auto;
+}
+
+#options {
+    margin: auto;
+}
+
+#opt {
+    margin-right: 20px;
+}
+
+#opt1 {
+    padding-right: 30px;
+}
+
+button {
+    margin-left: 40px;
+}
+body{
+    background-image: url("../../assets/img1.jpg");
+    height: 91vh;
+    width: 100%;
+    background-size: cover;
+}

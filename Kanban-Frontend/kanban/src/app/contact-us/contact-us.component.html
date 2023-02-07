@@ -1,0 +1,76 @@
+<body>
+    <div class="back">
+        <a href="home" class="button1"><button mat-raised-button>Go Back</button></a>
+    </div>
+    <div class="container">
+        <header>
+            <h1>Contact Us</h1>
+            <p>A kanban board is one of the tools that can be used to implement kanban to manage work at a personal or organizational level. Kanban boards visually depict work at various stages of a process using cards to represent work items and columns to represent each stage of the process. </p><a href="https://en.wikipedia.org/wiki/Kanban_board">Read More</a>
+        </header>
+        <div class="content">
+            <div class="content-form">
+                <mat-card>
+                    <!-- <i class="fa fa-map-marker fa-2x" aria-hidden="true"></i> -->
+                   
+                    <h2>Address<mat-icon class="content-icon">location_on</mat-icon></h2>
+            
+                    <p>
+                        NIIT India Headquarters<br>
+                        85, Sector 32 Institutional, Gurgaon 122001, Haryana, India
+                        
+                    </p>
+                </mat-card>
+
+                <mat-card>
+                    <!-- <i class="fa fa-phone fa-2x" aria-hidden="true"></i> -->
+                    <h2>Phone<mat-icon class="content-icon">phone</mat-icon></h2>
+                    <p>123-456-78901548</p>
+                </mat-card>
+
+                <mat-card>
+
+                    <h2>E-mail<mat-icon class="content-icon">mail</mat-icon></h2>
+                    
+                    <p>abhinav1232@niit.com<br>
+                    vishal321@niit.com<br>
+                    kunal4433@niit.com</p>
+                </mat-card>
+            </div>
+        </div>
+
+      <form>
+        <div class="form">
+            <div class="right">
+              <div class="contact-form">
+                  <input type="text" required>
+                  <span>Full Name</span>
+              </div>
+  
+              <div class="contact-form">
+                  <input type="E-mail" required>
+                  <span>E-mail Id</span>
+              </div>
+              <div class="contact-form">
+                  <textarea name="text" style="border-bottom: 2px solid black;">
+                    
+                  </textarea>
+                  <span> Type your Message....</span>
+              </div>
+  
+              <div class="contact-form">
+                  <input type="submit" name="submit" (click)="onSubmit()">
+              </div>
+              </div>
+          </div>
+    </form>
+        <div class="media" style="color: black;">
+            <li><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></li>
+            <li><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></li>
+            <li><i class="fa fa-whatsapp fa-2x" aria-hidden="true"></i></li>
+            <li><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></li>
+        </div>
+        <div class="empty">
+
+        </div>
+    </div>    
+</body>

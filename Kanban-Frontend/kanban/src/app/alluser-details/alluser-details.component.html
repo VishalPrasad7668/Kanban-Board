@@ -1,0 +1,46 @@
+<mat-toolbar class="toolbar">
+    <mat-toolbar-row>
+
+        <label style="color: azure;margin-left: 1%;"><b>Kanban Board</b></label>
+        <!-- <label (click)="onDashboard()" style="color: azure;margin-left: 75%;font-size: medium;">Dashboard</label>
+        <label (click)="onLogout()" style="color: azure;margin-left: 3%;font-size: medium;">Log Out</label> -->
+        <!-- <label (click)="onClick()" style="color: azure;margin-left: 5%;font-size: large;">All users</label> -->
+
+        <div style="background-color: #897622; margin-left: 930px;">
+
+            <mat-select placeholder="Hi, {{myUserData.fullName}}">
+              <mat-option value="option2" (click)="onDashboard()"  style="background-color: #897622; color: azure;margin-top: -8px;"><span style=" color: azure">Dashboard</span></mat-option>
+              <mat-option value="option3" (click)="onLogout()" style="background-color: #897622; margin-bottom: -8px;"><span style=" color: azure">Log Out</span></mat-option>
+            </mat-select>
+      
+          </div>
+    </mat-toolbar-row>
+</mat-toolbar>
+
+<body>
+    
+
+    <div class="container">
+        <div class="row">
+            <div *ngFor="let user of userData | paginate: 
+            { itemsPerPage: 4, currentPage: page }" class="col-lg-4 mt-3">
+                <mat-card class="example-card">
+                    <mat-card-header>
+                        <mat-card-title>
+                            <h3><span id="span"><b>Full Name:</b> {{user.fullName}}<button mat-icon-button id="infobtn"
+                                        (click)="openUserDetails(user)"><mat-icon>info</mat-icon></button></span></h3>
+                        </mat-card-title>
+
+                    </mat-card-header>
+
+                    <mat-card-actions>
+                        <button mat-raised-button (click)="onClick(user.emailId)" id="button">Assign Task</button>
+
+                    </mat-card-actions>
+                </mat-card>
+            </div>
+        </div>
+    </div>
+    <pagination-controls (pageChange)="page = $event" class="pgctrl">
+    </pagination-controls>
+</body>

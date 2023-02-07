@@ -1,0 +1,65 @@
+body{
+    background-color: rgb(238, 236, 236);
+}
+mat-card {
+    width: 500px;
+    height: 400px;
+    margin-left: 8.5%;
+    text-align: center;
+    margin-top: 10%;
+    margin-bottom: 5%;
+    border-radius: 10px;
+    background-color: whitesmoke;
+    
+}
+h1{
+    color: #897622;
+    margin-left: 2%;
+    
+}
+mat-form-field {
+    display: block;
+
+}
+
+.toolbar{
+    background-color: #897622;
+    width: 100%
+}
+section .imgBx img
+{
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+section .imgBx
+{
+    position: relative;
+    width:50%;
+    height: 100%;
+}
+section .imgBx:before
+{
+ content: '';
+ position: absolute;
+ top: 0;
+ left: 0;
+ width:100%;
+ height: 100%;
+ background: linear-gradient(225 deg,#897622,#7c8285);
+ z-index: 1;
+ mix-blend-mode: screen;
+}
+section{
+    
+   position: relative;
+   width: 100%;
+   height: 100vh;
+   display: flex;
+}
+.contextBx{
+    padding: 50px 0px 500px 150px;
+}

@@ -1,0 +1,81 @@
+<mat-card id="container">
+    <div id="head">
+        <h3>|| Add your task ||</h3>
+    </div>
+    <mat-divider></mat-divider>
+
+
+    <form (ngSubmit)="onSubmit()" [formGroup]="addForm">
+        <div id="card">
+            <div>
+                <!-- <mat-form-field class="field" appearance="outline">
+                    <mat-label>Task Id</mat-label>
+                    <input matInput placeholder="Task Id" formControlName="taskId" id="taskId">
+                    <mat-error *ngIf="taskId?.hasError('required')">
+                        Task Id is Compulsory.
+                    </mat-error>
+                </mat-form-field> -->
+                <mat-form-field class="field" appearance="outline">
+                    <mat-label>Assignee</mat-label>
+                    <input matInput placeholder="Assignee" formControlName="assignee" id="assignee">
+                    <mat-error *ngIf="assignee?.hasError('required')">
+                        Assign is Someone.
+                    </mat-error>
+                    <mat-error *ngIf="assignee?.hasError('pattern')">
+                        Assignee name should start with capital.
+                    </mat-error>
+                </mat-form-field>
+            </div>
+
+            <mat-form-field appearance="outline">
+                <mat-label>Task Title</mat-label>
+                <input matInput placeholder="Title" formControlName="taskTitle" id="title">
+                <mat-error *ngIf="taskTitle?.hasError('required')">
+                    Title is Compulsory.
+                </mat-error>
+                <mat-error *ngIf="taskTitle?.hasError('minlength')">
+                    Title should have minimum of 10 characters atleast.
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Description</mat-label>
+                <textarea matInput rows="5" formControlName="taskDescription" id="description"></textarea>
+                <mat-error *ngIf="taskDescription?.hasError('required')">
+                    Add Description to the Task.
+                </mat-error>
+                <mat-error *ngIf="taskDescription?.hasError('minlength')">
+                    Description should have minimum of 20 characters atleast.
+                </mat-error>
+            </mat-form-field>
+
+            <div id="options">
+                <mat-form-field appearance="outline" id="opt">
+                    <mat-label>Priority</mat-label>
+                    <mat-select formControlName="taskPriority" id="priority">
+                        <mat-option value="Urgent"><mat-icon style="color:red;">flag</mat-icon>Urgent</mat-option>
+                        <mat-option value="High"><mat-icon
+                                style="color:rgb(226, 116, 135);">flag</mat-icon>High</mat-option>
+                        <mat-option value="Normal"><mat-icon style="color:skyblue;">flag</mat-icon>Normal</mat-option>
+                        <mat-option value="Low"><mat-icon style="color:wheat;">flag</mat-icon>Low</mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <mat-form-field appearance="outline" id="opt1">
+                    <mat-label>Deadline</mat-label>
+                    <input matInput [matDatepicker]="picker" [min]="maxDate" required formControlName="taskDeadline">
+                    <mat-error *ngIf="taskDeadline?.invalid && (taskDeadline?.dirty || taskDeadline?.touched)">
+                        Deadline is Compulsory
+                    </mat-error>
+                    <mat-hint>MM/DD/YYYY</mat-hint>
+                    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+            </div>
+
+            <div id="submit">
+                <button mat-raised-button type="submit" color="primary" [disabled]="!addForm.valid">Submit</button>
+                <button mat-raised-button type="reset" color="accent">Reset</button>
+            </div>
+
+        </div>
+    </form>
+</mat-card>
